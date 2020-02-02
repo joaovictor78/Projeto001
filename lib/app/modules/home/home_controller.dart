@@ -13,4 +13,3 @@ abstract class _HomeBase with Store {
     value++;
   }
 }
-  
