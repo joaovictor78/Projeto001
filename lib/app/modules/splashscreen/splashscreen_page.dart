@@ -1,4 +1,3 @@
-import 'package:agrocontabilapp/app/modules/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'components/clipper-widget.dart';
@@ -21,8 +20,8 @@ class _SplashScreenPageState extends State<SplashScreenPage>
     animationController.forward();
     SystemChrome.setEnabledSystemUIOverlays([]);
     Future.delayed(Duration(seconds: 40000)).then((value) =>
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage())));
+        Navigator.pushReplacementNamed(
+            context, '/splashscreen'),);
     super.initState();
   }
 
@@ -44,6 +43,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(),
       color: Colors.white,
       child: Stack(
         children: <Widget>[
@@ -52,7 +52,12 @@ class _SplashScreenPageState extends State<SplashScreenPage>
             left: 50,
             right: 50,
             child: Container(
-              child: Image.asset('imagens/logo.png'),
+              child: Column(
+                children: <Widget>[
+                  Image.asset('imagens/logo.png'),
+                  Image.asset('lkdjf'),
+                ],
+              ),
             ),
           ),
           AnimatedBuilder(
