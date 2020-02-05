@@ -13,7 +13,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SlidingUpPanel(
-    
+    maxHeight: 250,
+    minHeight: 25,
     body: Scaffold(
      appBar: AppBar(
        centerTitle: true,

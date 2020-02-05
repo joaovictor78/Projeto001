@@ -5,13 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:agrocontabilapp/app/app_widget.dart';
 import 'package:agrocontabilapp/app/modules/home/home_module.dart';
 
-
+import 'modules/custoproducao/custoproducao_controller.dart';
 
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
-       Bind((i) => CaracteristicasController()),
-        Bind((i) => CaracteristicasController()), 
+        Bind((i) => CustoproducaoController()),
+        Bind((i) => CaracteristicasController()),
+        Bind((i) => CaracteristicasController()),
         Bind((i) => AppController()),
       ];
 
