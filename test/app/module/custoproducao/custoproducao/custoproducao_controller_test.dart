@@ -1,8 +1,7 @@
+import 'package:agrocontabilapp/app/modules/custoproducao/custoproducao_controller.dart';
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
-import 'package:agrocontabilapp/app/module/custoproducao/custoproducao/custoproducao_controller.dart';
 import 'package:agrocontabilapp/app/app_module.dart';
 
 void main() {

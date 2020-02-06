@@ -3,9 +3,9 @@ import 'package:agrocontabilapp/app/modules/caracteristicas/caracteristicas_cont
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:agrocontabilapp/app/app_widget.dart';
-import 'package:agrocontabilapp/app/modules/home/home_module.dart';
 
 import 'modules/custoproducao/custoproducao_controller.dart';
+import 'modules/splashscreen/splashscreen_module.dart';
 
 class AppModule extends MainModule {
   @override
@@ -18,7 +18,7 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router('/', module: HomeModule()),
+        Router('/', module: SplashscreenModule()),
       ];
 
   @override

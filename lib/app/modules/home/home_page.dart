@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class HomePage extends StatefulWidget {
-  final String title;
-  const HomePage({Key key, this.title = "Home"}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -26,7 +24,14 @@ class _HomePageState extends State<HomePage> {
      body: Container(
        child: Column(
          children: [
-
+        Container(
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: <Widget>[
+            
+          ],
+        ),
+        ),
          ],
        ),
      ),

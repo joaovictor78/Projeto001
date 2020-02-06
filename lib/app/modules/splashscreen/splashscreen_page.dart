@@ -19,7 +19,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
     );
     animationController.forward();
     SystemChrome.setEnabledSystemUIOverlays([]);
-    Future.delayed(Duration(seconds: 40000)).then((value) =>
+    Future.delayed(Duration(seconds: 4)).then((value) =>
         Navigator.pushReplacementNamed(
             context, '/splashscreen'),);
     super.initState();
@@ -54,8 +54,12 @@ class _SplashScreenPageState extends State<SplashScreenPage>
             child: Container(
               child: Column(
                 children: <Widget>[
-                  Image.asset('imagens/logo.png'),
-                  Image.asset('lkdjf'),
+                  SizedBox(
+                    child:  Image.asset('assets/logoapp.png'),
+                  ),
+                 SizedBox(
+                   child: Image.asset('assets/loadingbutton.gif'),
+                 ),
                 ],
               ),
             ),
