@@ -14,12 +14,12 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   @override
   void initState() {
     animationController = AnimationController(
-      duration: Duration(seconds: 3),
+      duration: Duration(seconds: 4),
       vsync: this,
     );
     animationController.forward();
     SystemChrome.setEnabledSystemUIOverlays([]);
-    Future.delayed(Duration(seconds: 4000)).then((value) =>
+    Future.delayed(Duration(seconds: 4)).then((value) =>
         Navigator.pushReplacementNamed(
             context, '/home'),);
     super.initState();
@@ -48,20 +48,20 @@ class _SplashScreenPageState extends State<SplashScreenPage>
       child: Stack(
         children: <Widget>[
           Positioned(
-            top: 45,
+            top: 40,
             left: 50,
             right: 50,
             child: Container(
               child: Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 50,
-                    width: 50,
+                    height: 180,
+                    width: 190,
                     child:  Image.asset('assets/logoapp.png'),
                   ),
                  SizedBox(
-                   height: 50,
-                   width: 50,
+                   height: 38,
+                   width: 38,
                    child: Image.asset('assets/loadingbutton.gif'),
                  ),
                 ],

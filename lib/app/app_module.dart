@@ -23,7 +23,7 @@ class AppModule extends MainModule {
         Router('/splashscreen', module: SplashscreenModule()),
         Router('/caracteristicas', module: CaracteristicasModule()),
         Router('/custoproducao', module: CustoproducaoModule()),
-        Router('/home', module: HomeModule()),
+        Router('/home', module: HomeModule(), transition: TransitionType.scale),
       ];
 
   @override
