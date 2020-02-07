@@ -14,12 +14,12 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   @override
   void initState() {
     animationController = AnimationController(
-      duration: Duration(seconds: 4),
+      duration: Duration(seconds: 3),
       vsync: this,
     );
     animationController.forward();
     SystemChrome.setEnabledSystemUIOverlays([]);
-    Future.delayed(Duration(seconds: 4)).then((value) =>
+    Future.delayed(Duration(seconds: 4000)).then((value) =>
         Navigator.pushReplacementNamed(
             context, '/home'),);
     super.initState();
@@ -28,7 +28,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   @override
   void didChangeDependencies() {
     animGreenContainer = Tween(
-      begin: 3.0,
+      begin: 5.0,
       end: 1.0,
     ).animate(animationController);
     super.didChangeDependencies();
@@ -55,8 +55,8 @@ class _SplashScreenPageState extends State<SplashScreenPage>
               child: Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 150,
-                    width: 150,
+                    height: 50,
+                    width: 50,
                     child:  Image.asset('assets/logoapp.png'),
                   ),
                  SizedBox(

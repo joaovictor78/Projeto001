@@ -17,7 +17,8 @@ dependencies:
 assets:
   - assets/logoapp.png
   - assets/loadingbutton.gif
-
+fonts:
+  - icons/CustomIcons.ttf
 dev_dependencies:
   mockito: ^4.1.1
   mobx_codegen: ^1.0.1
