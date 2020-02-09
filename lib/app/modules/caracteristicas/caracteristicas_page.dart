@@ -20,24 +20,15 @@ class _CaracteristicasPageState extends State<CaracteristicasPage> {
       ),
       body: Column(
         children: <Widget>[
-          DropdownButton(
-            hint: Text("Principais atividade(s):"),
-            items: itens
-                .map((value) => DropdownMenuItem(
-                      child: Text(selected),
-                      value: selected,
-                    ))
-                .toList(),
-            onChanged: (value) {
-              setState(() {
-                selected = value;
-              });
-            },
-            value: selected,
-          ),
+         
         ],
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Container(
+      
+        height: 45,
+        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.symmetric(horizontal: 15),
         child: RaisedButton(
           onPressed: () {},
           child: Center(

@@ -12,6 +12,10 @@ class CustoproducaoPage extends StatefulWidget {
 
 class _CustoproducaoPageState extends State<CustoproducaoPage> {
   var maoDeObra = DraggableButton(title: "MÃO DE OBRA");
+  var insumos = DraggableButton(title: "INSUMOS");
+  var despesasAdministrativas = DraggableButton(title: "DESPESAS ADMINISTRATIVAS");
+  var outros = DraggableButton(title: "OUTROS CUSTOS");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,44 +26,72 @@ class _CustoproducaoPageState extends State<CustoproducaoPage> {
         ),
         elevation: 0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.teal,
       ),
       body: Container(
         child: Column(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(top: 2),
+              alignment: Alignment.topCenter,
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2.5,
-              color: Colors.teal[600],
+              height: MediaQuery.of(context).size.height / 2.6,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(bottomLeft: Radius.elliptical(0, 0),
-                 bottomRight: Radius.elliptical(0, 0) ),
+                color: Colors.teal,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.elliptical(120, 90),
+                    bottomRight: Radius.elliptical(120, 90)),
               ),
               child: Stack(
                 children: [
-                  Card(
-                    
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 15,
+                      ),
+                      height: MediaQuery.of(context).size.height / 3.2,
+                      width: MediaQuery.of(context).size.width,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        elevation: 7,
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Expanded(
-              child: Column(
-                children: [
-                  maoDeObra,
-                ],
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    maoDeObra,
+                    insumos,
+                    despesasAdministrativas,
+                    outros,
+                  ],
+                ),
               ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.keyboard_arrow_right,
-          color: Colors.white,
-          size: 15,
+        onPressed: () {
+          Navigator.pushNamed(context, '/caracteristicas');
+        },
+        child: Center(
+          child: Icon(
+            Icons.keyboard_arrow_right,
+            color: Colors.white,
+            size: 30,
+          ),
         ),
       ),
     );
