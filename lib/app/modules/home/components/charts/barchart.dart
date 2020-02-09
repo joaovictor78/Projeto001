@@ -2,21 +2,20 @@ import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 class GroupedBarChart extends StatelessWidget{
  
-  final List<charts.Series> seriesList;
   final bool animate;
 
-  GroupedBarChart(this.seriesList, {this.animate});
-
-  factory GroupedBarChart.withSampleData() {
-    return  GroupedBarChart(
-      _createSampleData(),
+  GroupedBarChart({this.animate});
+ 
+  factory GroupedBarChart.withSampleData(){
+    return GroupedBarChart(
       animate: true,
     );
   }
+
   @override
   Widget build(BuildContext context) {
-    return new charts.BarChart(
-      seriesList,
+    return charts.BarChart(
+      _createSampleData(),
       animate: animate,
       barGroupingType: charts.BarGroupingType.grouped,
     );
@@ -66,6 +65,8 @@ class GroupedBarChart extends StatelessWidget{
     ];
   }
 }
+
+
 
 class OrdinalSales {
   final String year;

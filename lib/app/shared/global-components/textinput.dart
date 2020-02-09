@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-class TextInput extends FormField{
-String title;
+class TextInput extends StatelessWidget {
+  String title;
 TextInput({@required this.title});
-dynamic textInput(BuildContext context){
-return Container(
-  margin: EdgeInsets.symmetric(horizontal: 20),
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+  margin: EdgeInsets.symmetric(horizontal: 10),
   width: MediaQuery.of(context).size.width,
-  height: 40,
+  height: 60,
   child: TextFormField(
   decoration: InputDecoration(
     hintText: title,
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
+      borderRadius: BorderRadius.circular(28),
       borderSide: BorderSide.none,
     ),
-    fillColor: Colors.grey.shade100,
+    fillColor: Colors.grey.shade300,
+    filled: true,
   ),
-  ),
-);
-}
+  ),     
+    );
+  }
 }
