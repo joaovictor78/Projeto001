@@ -84,7 +84,7 @@ class _CustoproducaoPageState extends State<CustoproducaoPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/caracteristicas');
+          Navigator.pushNamed(context, '/equipamentosbenfeitorias');
         },
         child: Center(
           child: Icon(

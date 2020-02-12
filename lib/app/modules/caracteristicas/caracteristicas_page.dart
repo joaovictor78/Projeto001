@@ -28,13 +28,20 @@ class _CaracteristicasPageState extends State<CaracteristicasPage> {
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           TextInput(title: "Nome do proprietario"),
           SizedBox(
-            height: 12,
+            height: 10,
           ),
           TextInput(title: "Nome da fazenda"),
+           SizedBox(
+            height: 10,
+          ),
+           TextInput(title: "Tamanho em (ha):"),
+            SizedBox(
+            height: 10,
+          ),
           Container(
             width: MediaQuery.of(context).size.width,
              margin: EdgeInsets.symmetric(horizontal: 10),
@@ -62,7 +69,8 @@ class _CaracteristicasPageState extends State<CaracteristicasPage> {
                 });
               },
             ),
-          )
+          ),
+           
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -74,7 +82,9 @@ class _CaracteristicasPageState extends State<CaracteristicasPage> {
           color: Colors.orangeAccent,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/custoproducao');
+          },
           child: Center(
             child: Text(
               "Proximo",
@@ -85,7 +95,9 @@ class _CaracteristicasPageState extends State<CaracteristicasPage> {
             ),
           ),
         ),
+
       ),
+     
     );
   }
 }

@@ -17,7 +17,7 @@ class _NeuromorphicButtonState extends State<NeuromorphicButton> {
 
   void onPressedDown(PointerDownEvent _) => setState(() {
         isPressed = true;
-           Navigator.pushNamed(context, '/custoproducao');
+           Navigator.pushNamed(context, '/caracteristicas');
   
       });
 

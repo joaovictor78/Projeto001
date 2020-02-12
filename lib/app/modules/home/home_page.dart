@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
    
 
-   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+   final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
   final controller = PageController(
     initialPage: 1,
   );
@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         iconTheme:  IconThemeData(color: Colors.green),
         centerTitle: true,
